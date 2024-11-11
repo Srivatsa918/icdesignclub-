@@ -14,154 +14,142 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            background-color: #111;
             color: white;
-            line-height: 1.6;
-            height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        p {
+            color: #ddd;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
         }
 
         /* Navigation Bar */
         nav {
+            background-color: rgba(0, 0, 0, 0.8);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style-type: none;
+            padding: 15px;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-evenly;
+            z-index: 1000;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            padding: 5px 15px;
+            padding: 10px 20px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            background-color: #2575fc;
+            background-color: #fff;
+            color: #000;
             border-radius: 5px;
         }
 
-        /* Main Hero Section */
-        .hero {
+        /* Main Section */
+        .main-section {
+            padding-top: 80px;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #222;
             text-align: center;
-            background: rgba(0, 0, 0, 0.5);
+            background-image: url('https://via.placeholder.com/1500x800.png?text=Electronics+Components'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        .main-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        .hero p {
+        .main-section p {
             font-size: 1.2rem;
-            color: #ddd;
+            margin-bottom: 30px;
         }
 
         .cta-btn {
-            background-color: #2575fc;
-            color: white;
-            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            padding: 12px 24px;
             font-size: 1.2rem;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 20px;
-            transition: 0.3s;
+            transition: background-color 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: #6a11cb;
-        }
-
-        /* Multi-Column Layout */
-        .main-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 30px;
-            padding: 50px 20px;
-        }
-
-        .content-section {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .content-section:hover {
-            background-color: rgba(0, 0, 0, 0.85);
-        }
-
-        .content-section h2 {
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        .content-section p {
-            font-size: 1.1rem;
+            background-color: #2575fc;
+            color: #fff;
         }
 
         /* Form Section */
         .form-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 600px;
+            padding: 50px 30px;
+            background-color: #333;
             margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
         }
 
         .form-container h2 {
-            margin-bottom: 20px;
             font-size: 2rem;
+            margin-bottom: 30px;
             text-align: center;
         }
 
-        .form-container form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-container label {
-            font-size: 1.1rem;
-        }
-
-        .form-container input {
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #444;
             border-radius: 5px;
-            background-color: #333;
-            color: white;
+            margin-bottom: 20px;
+            background-color: #555;
+            color: #fff;
             font-size: 1rem;
         }
 
         .form-container button {
             background-color: #2575fc;
-            color: white;
-            padding: 10px;
+            color: #fff;
+            padding: 12px;
             border: none;
+            width: 100%;
+            font-size: 1.1rem;
             border-radius: 5px;
-            font-size: 1.2rem;
             cursor: pointer;
         }
 
@@ -169,56 +157,88 @@
             background-color: #6a11cb;
         }
 
-        /* Personal Info Section */
-        .personal-info {
-            position: absolute;
-            left: 20px;
-            top: 20%;
-            padding: 30px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
+        /* Previous Coordinators Section */
+        .coordinators {
+            padding: 50px 30px;
+            background-color: #222;
+            text-align: center;
         }
 
-        .personal-info h3 {
+        .coordinators h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .coordinators .coordinator-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .coordinator-item {
+            width: 250px;
+            margin: 15px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .coordinator-item img {
+            width: 100%;
+            border-radius: 50%;
             margin-bottom: 15px;
+        }
+
+        .coordinator-item h3 {
+            margin-bottom: 10px;
             font-size: 1.5rem;
         }
 
-        .personal-info p {
+        .coordinator-item p {
             font-size: 1.1rem;
         }
 
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
+        /* Contact Info Section */
+        .contact-info {
+            padding: 50px 30px;
+            background-color: #222;
             color: white;
-            padding: 20px 0;
             text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
 
-        footer p {
-            font-size: 1rem;
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
 
-            .personal-info {
-                top: 60%;
-                left: 10%;
-                width: 80%;
-            }
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
 
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-            }
+        .contact-info a {
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+        }
+
+        /* Scroll Behavior */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background-color: #222;
+        }
+
+        section:nth-child(odd) {
+            background-color: #111;
         }
 
     </style>
@@ -226,70 +246,64 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#coordinators">Previous Coordinators</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div>
-            <h1>Welcome to ICDesignClub</h1>
-            <p>Your creative space to design, collaborate, and innovate.</p>
+    <!-- Main Section -->
+    <header>
+        <div class="main-section">
+            <h2>Welcome to ICDesignClub</h2>
+            <p>Where creativity meets innovation in the world of design and technology.</p>
             <button class="cta-btn">Get Started</button>
         </div>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="main-content">
-        <div class="content-section">
-            <h2>About Us</h2>
-            <p>We are a community of designers who believe in the power of creativity to bring about meaningful change. Join our club and start collaborating on innovative projects!</p>
-        </div>
-
-        <div class="content-section">
-            <h2>Services</h2>
-            <p>We offer a wide range of design services, including UI/UX, web design, branding, and graphic design. Whatever your creative need, we have the skills to make it happen.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>Portfolio</h2>
-            <p>Explore our past projects and see how we've helped clients bring their ideas to life with stunning design solutions.</p>
-        </div>
-    </div>
+    </header>
 
     <!-- Form Section -->
-    <div class="form-container">
-        <h2>Join ICDesignClub</h2>
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+    <section id="about">
+        <div class="form-container">
+            <h2>Join Our Community</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Phone Number" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+    <!-- Previous Coordinators Section -->
+    <section id="coordinators">
+        <div class="coordinators">
+            <h2>Previous Coordinators</h2>
+            <div class="coordinator-list">
+                <!-- Example of coordinator item with image -->
+                <div class="coordinator-item">
+                    <img src="https://via.placeholder.com/150" alt="Coordinator 1">
+                    <h3>John Doe</h3>
+                    <p>2019-2020</p>
+                </div>
+                <div class="coordinator-item">
+                    <img src="https://via.placeholder.com/150" alt="Coordinator 2">
+                    <h3>Jane Smith</h3>
+                    <p>2020-2021</p>
+                </div>
+                <!-- Add more coordinator items as needed -->
+            </div>
+        </div>
+    </section>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
-
-    <!-- Personal Info Section -->
-    <div class="personal-info">
-        <h3>Personal Info</h3>
-        <p>Username: User123</p>
-        <p>Email: user123@example.com</p>
-        <p>Member Since: January 2023</p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 ICDesignClub. All Rights Reserved.</p>
-    </footer>
+    <!-- Contact Information Section -->
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+            <p>Email: <a href="mailto:info@icdesignclub.com">info@icdesignclub.com</a></p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </section>
 </body>
 </html>
