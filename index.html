@@ -33,6 +33,8 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            position: relative;
         }
 
         header h1 {
@@ -72,9 +74,9 @@
             border-radius: 5px;
         }
 
-        /* Main Section */
+        /* Main Section (Hero Section) */
         .main-section {
-            padding-top: 80px;
+            padding-top: 80px; /* Adjusted for fixed navbar */
             height: 100vh;
             background-color: #222;
             text-align: center;
@@ -252,14 +254,12 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Main Section -->
-    <header>
-        <div class="main-section">
-            <h2>Welcome to ICDesignClub</h2>
-            <p>Where creativity meets innovation in the world of design and technology.</p>
-            <button class="cta-btn">Get Started</button>
-        </div>
-    </header>
+    <!-- Main Section (Hero Section) -->
+    <section id="home" class="main-section">
+        <h2>Welcome to ICDesignClub</h2>
+        <p>Where creativity meets innovation in the world of design and technology.</p>
+        <button class="cta-btn">Get Started</button>
+    </section>
 
     <!-- Form Section -->
     <section id="about">
